@@ -104,6 +104,20 @@ const HomePage: React.FC = () => {
           github="https://github.com/stackblitz"
           website="https://stackblitz.com"
         />
+        <CollaboratorCard
+          name="alphaben"
+          role="Full stack developer"
+          image="https://avatars.githubusercontent.com/u/107180422?v=4"
+          github="https://github.com/bennamrouche"
+          website="https://github.com/bennamrouche"
+        />
+        <CollaboratorCard
+          name="Amine boukour"
+          role="Full stack developer"
+          image="https://avatars.githubusercontent.com/u/133964099?v=4"
+          github="https://github.com/mboukour"
+          website="https://github.com/mboukour"
+        />
       </div>
 
       <h2>How to Use This Site</h2>

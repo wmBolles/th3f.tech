@@ -205,7 +205,7 @@ const ResourcesPage: React.FC = () => {
             <ul className="list-disc pl-5 mb-0">
               <li><a href="https://www.tutorialspoint.com/assembly_programming/" target="_blank" rel="noopener noreferrer">Assembly Programming Tutorial</a></li>
               <li><a href="https://beginners.re/" target="_blank" rel="noopener noreferrer">RE for Beginners</a></li>
-              <li><a href="https://godbolt.org/" target="_blank" rel="noopener noreferrer">Compiler Explorer</a></li>
+              <li><a href="https://god.org/" target="_blank" rel="noopener noreferrer">Compiler Explorer</a></li>
             </ul>
           </div>
         </div>
