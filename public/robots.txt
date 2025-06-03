@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://th3f.tech/sitemap.xml

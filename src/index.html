@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>TH3F.TECH - Advanced Cybersecurity Knowledge Base | Ethical Hacking Education</title>
+    <meta name="description" content="Professional cybersecurity education platform covering networking attacks, web security, reverse engineering, and advanced virus research. Free knowledge for ethical hackers and security professionals.">
+    <meta name="keywords" content="cybersecurity, ethical hacking, penetration testing, security research, MITM attacks, SQL injection, reverse engineering, virus research, network security, web security">
+    <meta name="author" content="Wassim Bolles">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" href="/favicon.svg">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://th3f.tech">
+    <meta property="og:title" content="TH3F.TECH - Advanced Cybersecurity Knowledge Base">
+    <meta property="og:description" content="Professional cybersecurity education platform with comprehensive attack methodologies, defense strategies, and ethical hacking resources.">
+    <meta property="og:image" content="https://th3f.tech/assets/images/th3f-og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="TH3F.TECH">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://th3f.tech">
+    <meta property="twitter:title" content="TH3F.TECH - Advanced Cybersecurity Knowledge Base">
+    <meta property="twitter:description" content="Professional cybersecurity education platform with comprehensive attack methodologies and defense strategies.">
+    <meta property="twitter:image" content="https://th3f.tech/assets/images/th3f-og-image.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://th3f.tech">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="./style.css">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "TH3F.TECH",
+        "description": "Advanced cybersecurity knowledge base and educational platform",
+        "url": "https://th3f.tech",
+        "sameAs": [
+            "https://github.com/wmbolles/th3f.tech"
+        ],
+        "founder": {
+            "@type": "Person",
+            "name": "Wassim Bolles",
+            "url": "https://wmbolles.com"
+        }
+    }
+    </script>
+</head>
+<body class="bg-gray-50 dark:bg-dark-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="fixed inset-0 bg-white dark:bg-dark-900 z-50 flex items-center justify-center">
+        <div class="text-center">
+            <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-primary-500 border-solid mx-auto mb-4"></div>
+            <p class="text-lg font-semibold">Loading TH3F.TECH...</p>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white/90 dark:bg-dark-900/90 backdrop-blur-md border-b border-gray-200 dark:border-dark-700 z-40">
+        <div class="flex items-center justify-between px-6 py-4">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">T3</span>
+                </div>
+                <h1 class="text-xl font-bold bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent">
+                    TH3F.TECH
+                </h1>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="flex-1 max-w-2xl mx-8">
+                <div class="relative">
+                    <input 
+                        type="text" 
+                        id="search-input"
+                        placeholder="Search attacks, techniques, or topics..." 
+                        class="w-full px-4 py-2 pl-10 pr-4 border border-gray-300 dark:border-dark-600 rounded-lg bg-white dark:bg-dark-800 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
+                    >
+                    <div class="absolute left-3 top-1/2 transform -translate-y-1/2">
+                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <!-- Search Results -->
+                <div id="search-results" class="absolute top-full left-0 right-0 bg-white dark:bg-dark-800 border border-gray-200 dark:border-dark-600 rounded-lg mt-1 max-h-96 overflow-y-auto hidden shadow-xl">
+                </div>
+            </div>
+
+            <!-- Theme Toggle -->
+            <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-dark-800 hover:bg-gray-200 dark:hover:bg-dark-700 transition-colors">
+                <svg class="w-6 h-6 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                </svg>
+                <svg class="w-6 h-6 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="flex pt-20">
+        <!-- Sidebar -->
+        <aside class="fixed left-0 top-20 bottom-0 w-80 bg-white dark:bg-dark-800 border-r border-gray-200 dark:border-dark-700 overflow-y-auto">
+            <nav class="p-4">
+                <ul class="space-y-2">
+                    <li>
+                        <button class="nav-item active w-full text-left px-4 py-3 rounded-lg bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-300 font-semibold" data-section="home">
+                            🏠 Home
+                        </button>
+                    </li>
+                    
+                    <!-- Navigation Sections -->
+                    <li class="nav-section">
+                        <button class="nav-item w-full text-left px-4 py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-700 transition-colors" data-section="networking">
+                            🌐 Networking Attacks
+                        </button>
+                        <ul class="sub-menu ml-4 mt-2 space-y-1 hidden">
+                            <li><button class="attack-link w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100 dark:hover:bg-dark-700" data-attack="mitm">Man in the Middle</button></li>
+                            <li><button class="attack-link w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100 dark:hover:bg-dark-700" data-attack="dns-spoofing">DNS Spoofing</button></li>
+                            <li><button class="attack-link w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100 dark:hover:bg-dark-700" data-attack="arp-poisoning">ARP Poisoning</button></li>
+                            <li><button class="attack-link w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100 dark:hover:bg-dark-700" data-attack="ddos">DDoS Attacks</button></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-section">
+                        <button class="nav-item w-full text-left px-4 py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-700 transition-colors" data-section="web">
+                            🌍 Web Security
+                        </button>
+                        <ul class="sub-menu ml-4 mt-2 space-y-1 hidden">
+                            <li><button class="attack-link w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100 dark:hover:bg-dark-700" data-attack="sql-injection">SQL Injection</button></li>
+                            <li><button class="attack-link w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100 dark:hover:bg-dark-700" data-attack="xss">Cross-Site Scripting</button></li>
+                            <li><button class="attack-link w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100 dark:hover:bg-dark-700" data-attack="csrf">CSRF</button></li>
+                            <li><button class="attack-link w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100 dark:hover:bg-dark-700" data-attack="rfi">Remote File Inclusion</button></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-section">
+                        <button class="nav-item w-full text-left px-4 py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-700 transition-colors" data-section="kernel">
+                            ⚙️ System & Kernel
+                        </button>
+                        <ul class="sub-menu ml-4 mt-2 space-y-1 hidden">
+                            <li><button class="attack-link w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100 dark:hover:bg-dark-700" data-attack="buffer-overflow">Buffer Overflow</button></li>
+                            <li><button class="attack-link w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100 dark:hover:bg-dark-700" data-attack="privilege-escalation">Privilege Escalation</button></li>
+                            <li><button class="attack-link w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100 dark:hover:bg-dark-700" data-attack="rootkit">Rootkits</button></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-section">
+                        <button class="nav-item w-full text-left px-4 py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-700 transition-colors" data-section="mobile">
+                            📱 Mobile Security
+                        </button>
+                        <ul class="sub-menu ml-4 mt-2 space-y-1 hidden">
+                            <li><button class="attack-link w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100 dark:hover:bg-dark-700" data-attack="smishing">Smishing</button></li>
+                            <li><button class="attack-link w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100 dark:hover:bg-dark-700" data-attack="app-patching">App Patching</button></li>
+                            <li><button class="attack-link w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100 dark:hover:bg-dark-700" data-attack="bluetooth-attacks">Bluetooth Attacks</button></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-section">
+                        <button class="nav-item w-full text-left px-4 py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-700 transition-colors" data-section="reverse-engineering">
+                            🔍 Reverse Engineering
+                        </button>
+                        <ul class="sub-menu ml-4 mt-2 space-y-1 hidden">
+                            <li><button class="attack-link w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100 dark:hover:bg-dark-700" data-attack="binary-analysis">Binary Analysis</button></li>
+                            <li><button class="attack-link w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100 dark:hover:bg-dark-700" data-attack="disassembly">Disassembly</button></li>
+                            <li><button class="attack-link w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100 dark:hover:bg-dark-700" data-attack="debugging">Debugging</button></li>
+                        </ul>
+                    </li>
+
+                    <!-- Special Virus Section -->
+                    <li class="nav-section mt-6">
+                        <button class="nav-item virus-section w-full text-left px-4 py-3 rounded-lg bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold hover:from-red-600 hover:to-red-700 transition-all duration-300 animate-pulse-glow" data-section="virus-creation">
+                            🦠 Advanced Virus Research
+                        </button>
+                        <ul class="sub-menu ml-4 mt-2 space-y-1 hidden">
+                            <li><button class="attack-link w-full text-left px-3 py-2 text-sm rounded hover:bg-red-50 dark:hover:bg-red-900/20 text-red-700 dark:text-red-300" data-attack="virus-intro">Introduction to Viruses</button></li>
+                            <li><button class="attack-link w-full text-left px-3 py-2 text-sm rounded hover:bg-red-50 dark:hover:bg-red-900/20 text-red-700 dark:text-red-300" data-attack="c-fundamentals">C Programming</button></li>
+                            <li><button class="attack-link w-full text-left px-3 py-2 text-sm rounded hover:bg-red-50 dark:hover:bg-red-900/20 text-red-700 dark:text-red-300" data-attack="assembly-basics">Assembly Language</button></li>
+                            <li><button class="attack-link w-full text-left px-3 py-2 text-sm rounded hover:bg-red-50 dark:hover:bg-red-900/20 text-red-700 dark:text-red-300" data-attack="metamorphic-techniques">Metamorphic Techniques</button></li>
+                            <li><button class="attack-link w-full text-left px-3 py-2 text-sm rounded hover:bg-red-50 dark:hover:bg-red-900/20 text-red-700 dark:text-red-300" data-attack="advanced-resources">Advanced Resources</button></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 ml-80 p-8">
+            <!-- Home Content -->
+            <div id="home-content" class="content-section">
+                <!-- Hero Section -->
+                <section class="mb-12 text-center">
+                    <h1 class="text-5xl font-bold mb-6 bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 bg-clip-text text-transparent">
+                        Welcome to TH3F.TECH
+                    </h1>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+                        The most comprehensive cybersecurity knowledge base for ethical hackers, security researchers, and penetration testers. Everything should be free on the internet.
+                    </p>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-wrap gap-4 justify-center mb-12">
+                        <a href="https://github.com/wmbolles/th3f.tech" target="_blank" class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Contribute on GitHub
+                        </a>
+                        <button id="collaborate-btn" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                            Join as Collaborator
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Philosophy Section -->
+                <section class="mb-12 bg-white dark:bg-dark-800 rounded-xl p-8 shadow-lg">
+                    <h2 class="text-3xl font-bold mb-6 text-center">Our Philosophy</h2>
+                    <div class="prose prose-lg max-w-none dark:prose-invert">
+                        <p class="text-lg leading-relaxed mb-6">
+                            Knowledge should be free and accessible to everyone on the internet. We believe that understanding cybersecurity attacks and defense mechanisms is crucial for building a safer digital world.
+                        </p>
+                        <blockquote class="border-l-4 border-primary-500 pl-6 italic text-xl text-gray-700 dark:text-gray-300 bg-primary-50 dark:bg-primary-900/20 py-4 rounded-r-lg">
+                            "The only way to truly understand how to defend against attacks is to understand how they work."
+                        </blockquote>
+                    </div>
+                </section>
+
+                <!-- Collaborators Section -->
+                <section class="mb-12">
+                    <h2 class="text-3xl font-bold mb-8 text-center">Meet Our Team</h2>
+                    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        <!-- Wassim Bolles -->
+                        <div class="bg-white dark:bg-dark-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <div class="flex items-center mb-4">
+                                <img src="https://avatars.githubusercontent.com/u/106280014?v=4" alt="Wassim Bolles" class="w-16 h-16 rounded-full border-4 border-primary-500">
+                                <div class="ml-4">
+                                    <h3 class="text-xl font-bold">Wassim Bolles</h3>
+                                    <p class="text-gray-600 dark:text-gray-400">Founder & Lead Security Researcher</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 dark:text-gray-300 mb-4">
+                                Cybersecurity expert and passionate educator dedicated to making security knowledge accessible to everyone.
+                            </p>
+                            <div class="flex space-x-3">
+                                <a href="https://wmbolles.com" target="_blank" class="text-primary-600 hover:text-primary-700 transition-colors">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                                <a href="https://github.com/wmbolles" target="_blank" class="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 transition-colors">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Bolt AI -->
+                        <div class="bg-white dark:bg-dark-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <div class="flex items-center mb-4">
+                                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                    </svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-xl font-bold">Bolt AI</h3>
+                                    <p class="text-gray-600 dark:text-gray-400">AI Development Assistant</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 dark:text-gray-300 mb-4">
+                                Advanced AI assistant specializing in cybersecurity education, content curation, and platform development.
+                            </p>
+                            <div class="flex space-x-3">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+                                    AI Assistant
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- What You'll Find Section -->
+                <section class="mb-12 bg-gradient-to-br from-primary-50 to-blue-50 dark:from-primary-900/20 dark:to-blue-900/20 rounded-xl p-8">
+                    <h2 class="text-3xl font-bold mb-8 text-center">What You'll Discover</h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-white dark:bg-dark-800 p-6 rounded-lg shadow-sm">
+                            <div class="text-3xl mb-3">🌐</div>
+                            <h3 class="text-lg font-semibold mb-2">Network Security</h3>
+                            <p class="text-gray-600 dark:text-gray-400">MITM attacks, DNS spoofing, ARP poisoning, and advanced network exploitation techniques.</p>
+                        </div>
+                        <div class="bg-white dark:bg-dark-800 p-6 rounded-lg shadow-sm">
+                            <div class="text-3xl mb-3">🌍</div>
+                            <h3 class="text-lg font-semibold mb-2">Web Security</h3>
+                            <p class="text-gray-600 dark:text-gray-400">SQL injection, XSS, CSRF, and comprehensive web application security testing.</p>
+                        </div>
+                        <div class="bg-white dark:bg-dark-800 p-6 rounded-lg shadow-sm">
+                            <div class="text-3xl mb-3">⚙️</div>
+                            <h3 class="text-lg font-semibold mb-2">System Exploits</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Buffer overflows, privilege escalation, and kernel-level attack vectors.</p>
+                        </div>
+                        <div class="bg-white dark:bg-dark-800 p-6 rounded-lg shadow-sm">
+                            <div class="text-3xl mb-3">📱</div>
+                            <h3 class="text-lg font-semibold mb-2">Mobile Security</h3>
+                            <p class="text-gray-600 dark:text-gray-400">iOS and Android security testing, mobile malware, and device exploitation.</p>
+                        </div>
+                        <div class="bg-white dark:bg-dark-800 p-6 rounded-lg shadow-sm">
+                            <div class="text-3xl mb-3">🔍</div>
+                            <h3 class="text-lg font-semibold mb-2">Reverse Engineering</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Binary analysis, disassembly, debugging, and malware reverse engineering.</p>
+                        </div>
+                        <div class="bg-white dark:bg-dark-800 p-6 rounded-lg shadow-sm border-2 border-red-200 dark:border-red-800">
+                            <div class="text-3xl mb-3">🦠</div>
+                            <h3 class="text-lg font-semibold mb-2 text-red-700 dark:text-red-400">Advanced Research</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Cutting-edge virus research, metamorphic techniques, and advanced malware development.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <footer class="bg-dark-800 text-white rounded-xl p-8 mt-12">
+                    <div class="max-w-4xl mx-auto">
+                        <div class="mb-8">
+                            <h3 class="text-2xl font-bold mb-4">📚 Essential Resources</h3>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="font-semibold mb-2">Recommended Books</h4>
+                                    <ul class="space-y-1 text-gray-300">
+                                        <li>• "Attacking the Core" - Advanced System Exploitation</li>
+                                        <li>• "The Web Application Hacker's Handbook"</li>
+                                        <li>• "Metasploit: The Penetration Tester's Guide"</li>
+                                        <li>• "Gray Hat Python" - Security Programming</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-2">Online Resources</h4>
+                                    <ul class="space-y-1 text-gray-300">
+                                        <li>• OWASP Top 10 Vulnerabilities</li>
+                                        <li>• NIST Cybersecurity Framework</li>
+                                        <li>• CVE Database</li>
+                                        <li>• Security Research Papers</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-t border-gray-700 pt-6">
+                            <h3 class="text-xl font-bold mb-4">⚖️ Legal Disclaimer</h3>
+                            <p class="text-gray-300 mb-4 leading-relaxed">
+                                The information provided on this website is for educational purposes only. Users are responsible for ensuring that their use of this information complies with all applicable laws and regulations in their jurisdiction. This website does not promote or encourage illegal activities.
+                            </p>
+                            <p class="text-gray-300 mb-6 leading-relaxed">
+                                All content is intended for cybersecurity professionals, researchers, and students who need to understand attack vectors for defensive purposes. By using this website, you agree to use the information responsibly and ethically.
+                            </p>
+                            
+                            <div class="flex flex-wrap items-center justify-between">
+                                <div class="text-sm text-gray-400">
+                                    © 2025 TH3F.TECH - All rights reserved | 
+                                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a> | 
+                                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                                </div>
+                                <button id="footer-collaborate-btn" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors duration-200 flex items-center gap-2 mt-4 md:mt-0">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                    </svg>
+                                    Collaborate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+
+            <!-- Attack Content Container -->
+            <div id="attack-content" class="content-section hidden">
+                <div id="attack-details" class="bg-white dark:bg-dark-800 rounded-xl p-8 shadow-lg">
+                    <!-- Dynamic content will be loaded here -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Coming Soon Modal -->
+    <div id="coming-soon-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center">
+        <div class="bg-white dark:bg-dark-800 rounded-xl p-8 max-w-md mx-4 text-center animate-fade-in">
+            <div class="text-6xl mb-4">🚀</div>
+            <h2 class="text-2xl font-bold mb-4">Coming Soon!</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+                This is just the first prototype of TH3F.TECH. We're working hard to bring you comprehensive cybersecurity content with cutting-edge features!
+            </p>
+            <button id="close-modal" class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+                Let's Explore!
+            </button>
+        </div>
+    </div>
+
+    <script type="module" src="./ts/main.ts"></script>
+</body>
+</html>

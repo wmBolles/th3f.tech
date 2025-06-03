@@ -1,0 +1,167 @@
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+.dark-mode .sidebar {
+    background: #2d2d2d;
+    border-right-color: #404040;
+}
+
+.dark-mode .logo h2 {
+    color: #e0e0e0;
+}
+
+.dark-mode .theme-toggle {
+    border-bottom-color: #404040;
+}
+
+.dark-mode .nav-item {
+    color: #b0b0b0;
+}
+
+.dark-mode .nav-item:hover {
+    background: #404040;
+    color: #007bff;
+}
+
+.dark-mode .nav-item.active {
+    background: #1a365d;
+    color: #64b5f6;
+    border-left-color: #64b5f6;
+}
+
+.dark-mode .nav-section .sub-menu {
+    background: #404040;
+}
+
+.dark-mode .sub-menu li a {
+    color: #888;
+}
+
+.dark-mode .sub-menu li a:hover {
+    background: #4a4a4a;
+    color: #b0b0b0;
+}
+
+.dark-mode .special-section .sub-menu {
+    background: #3d2424;
+}
+
+.dark-mode .special-section .sub-menu li a {
+    color: #ff8a80;
+}
+
+.dark-mode .special-section .sub-menu li a:hover {
+    background: #4a2929;
+    color: #ffab91;
+}
+
+.dark-mode .main-header {
+    border-bottom-color: #404040;
+}
+
+.dark-mode .main-header h1 {
+    color: #e0e0e0;
+}
+
+.dark-mode .subtitle {
+    color: #888;
+}
+
+.dark-mode .philosophy,
+.dark-mode .mission,
+.dark-mode .creator-info {
+    background: #2d2d2d;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.dark-mode .philosophy h2,
+.dark-mode .mission h2 {
+    color: #e0e0e0;
+}
+
+.dark-mode .philosophy p,
+.dark-mode .mission p {
+    color: #b0b0b0;
+}
+
+.dark-mode .philosophy blockquote {
+    background: #404040;
+    border-left-color: #64b5f6;
+    color: #b0b0b0;
+}
+
+.dark-mode .mission ul li {
+    color: #b0b0b0;
+    border-bottom-color: #404040;
+}
+
+.dark-mode .mission ul li strong {
+    color: #e0e0e0;
+}
+
+.dark-mode .main-footer {
+    background: #1a1a1a;
+    border: 1px solid #404040;
+}
+
+.dark-mode .main-footer h3 {
+    color: #e0e0e0;
+}
+
+.dark-mode .main-footer p {
+    color: #888;
+}
+
+.dark-mode .footer-links {
+    border-top-color: #404040;
+}
+
+.dark-mode .attack-details {
+    background: #2d2d2d;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.dark-mode .attack-details h1 {
+    color: #e0e0e0;
+}
+
+.dark-mode .attack-details h2 {
+    color: #b0b0b0;
+}
+
+.dark-mode .attack-details p {
+    color: #888;
+}
+
+.dark-mode .attack-details code {
+    background: #404040;
+    color: #ff6b9d;
+}
+
+.dark-mode .attack-details pre {
+    background: #404040;
+    border-left-color: #64b5f6;
+}
+
+.dark-mode .modal-content {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+}
+
+.dark-mode .modal-content h2 {
+    color: #e0e0e0;
+}
+
+.dark-mode .modal-content p {
+    color: #b0b0b0;
+}
+
+.dark-mode .close {
+    color: #888;
+}
+
+.dark-mode .close:hover {
+    color: #e0e0e0;
+}

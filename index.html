@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TH3F.TECH - Cybersecurity Knowledge Base</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dark-mode.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <h2>TH3F.TECH</h2>
+            </div>
+            
+            <div class="theme-toggle">
+                <button id="themeToggle">🌙 Dark Mode</button>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-item active" data-section="home">Home</a></li>
+                
+                <li class="nav-section">
+                    <a href="#" class="nav-item" data-section="networking">Networking Attacks</a>
+                    <ul class="sub-menu">
+                        <li><a href="#" data-attack="mitm">Man in the Middle</a></li>
+                        <li><a href="#" data-attack="dns-spoofing">DNS Spoofing</a></li>
+                        <li><a href="#" data-attack="arp-poisoning">ARP Poisoning</a></li>
+                        <li><a href="#" data-attack="ddos">DDoS Attacks</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-section">
+                    <a href="#" class="nav-item" data-section="web">Web Attacks</a>
+                    <ul class="sub-menu">
+                        <li><a href="#" data-attack="sql-injection">SQL Injection</a></li>
+                        <li><a href="#" data-attack="xss">Cross-Site Scripting</a></li>
+                        <li><a href="#" data-attack="csrf">CSRF</a></li>
+                        <li><a href="#" data-attack="rfi">Remote File Inclusion</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-section">
+                    <a href="#" class="nav-item" data-section="kernel">Kernel Attacks</a>
+                    <ul class="sub-menu">
+                        <li><a href="#" data-attack="buffer-overflow">Buffer Overflow</a></li>
+                        <li><a href="#" data-attack="privilege-escalation">Privilege Escalation</a></li>
+                        <li><a href="#" data-attack="rootkit">Rootkits</a></li>
+                        <li><a href="#" data-attack="kernel-exploits">Kernel Exploits</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-section">
+                    <a href="#" class="nav-item" data-section="mobile">Mobile Attacks</a>
+                    <ul class="sub-menu">
+                        <li><a href="#" data-attack="smishing">Smishing</a></li>
+                        <li><a href="#" data-attack="app-patching">App Patching</a></li>
+                        <li><a href="#" data-attack="bluetooth-attacks">Bluetooth Attacks</a></li>
+                        <li><a href="#" data-attack="mobile-malware">Mobile Malware</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-section">
+                    <a href="#" class="nav-item" data-section="reverse-engineering">Reverse Engineering</a>
+                    <ul class="sub-menu">
+                        <li><a href="#" data-attack="binary-analysis">Binary Analysis</a></li>
+                        <li><a href="#" data-attack="disassembly">Disassembly</a></li>
+                        <li><a href="#" data-attack="debugging">Debugging</a></li>
+                        <li><a href="#" data-attack="obfuscation">Obfuscation</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-section special-section">
+                    <a href="#" class="nav-item virus-section" data-section="virus-creation">Virus Creation Resources</a>
+                    <ul class="sub-menu">
+                        <li><a href="#" data-attack="virus-intro">Introduction to Viruses</a></li>
+                        <li><a href="#" data-attack="c-fundamentals">C Programming Fundamentals</a></li>
+                        <li><a href="#" data-attack="assembly-basics">Assembly Language Basics</a></li>
+                        <li><a href="#" data-attack="metamorphic-techniques">Metamorphic Techniques</a></li>
+                        <li><a href="#" data-attack="advanced-resources">Advanced Resources Contact</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <div id="home-content" class="content-section active">
+                <header class="main-header">
+                    <h1>Welcome to TH3F.TECH</h1>
+                    <p class="subtitle">Cybersecurity Knowledge Base</p>
+                </header>
+
+                <section class="philosophy">
+                    <h2>Our Philosophy</h2>
+                    <p>Knowledge should be free and accessible to everyone on the internet. We believe that understanding cybersecurity attacks and defense mechanisms is crucial for building a safer digital world.</p>
+                    
+                    <p>This platform serves as a comprehensive resource for cybersecurity professionals, students, and enthusiasts who want to learn about various attack vectors, defense strategies, and security research methodologies.</p>
+                    
+                    <blockquote>
+                        "The only way to truly understand how to defend against attacks is to understand how they work."
+                    </blockquote>
+                </section>
+
+                <section class="mission">
+                    <h2>What You'll Find Here</h2>
+                    <ul>
+                        <li><strong>Networking Attacks:</strong> Learn about MITM, DNS spoofing, ARP poisoning, and more</li>
+                        <li><strong>Web Security:</strong> Understand SQL injection, XSS, CSRF, and web vulnerabilities</li>
+                        <li><strong>Kernel Exploits:</strong> Dive deep into system-level attacks and privilege escalation</li>
+                        <li><strong>Mobile Security:</strong> Explore mobile-specific attack vectors and vulnerabilities</li>
+                        <li><strong>Reverse Engineering:</strong> Master the art of binary analysis and reverse engineering</li>
+                        <li><strong>Advanced Research:</strong> Access cutting-edge security research and methodologies</li>
+                    </ul>
+                </section>
+
+                <section class="creator-info">
+                    <h2>Created with ❤️ by Wassim Bolles</h2>
+                    <p>
+                        <a href="https://wmbolles.com" target="_blank">Portfolio: wmbolles.com</a> | 
+                        <a href="https://github.com/wmbolles" target="_blank">GitHub: github.com/wmbolles</a>
+                    </p>
+                </section>
+
+                <footer class="main-footer">
+                    <h3>Legal Disclaimer</h3>
+                    <p>The information provided on this website is for educational purposes only. Users are responsible for ensuring that their use of this information complies with all applicable laws and regulations in their jurisdiction.</p>
+                    
+                    <p>This website does not promote or encourage illegal activities. All content is intended for cybersecurity professionals, researchers, and students who need to understand attack vectors for defensive purposes.</p>
+                    
+                    <p>By using this website, you agree to use the information responsibly and ethically. The creators of this website are not responsible for any misuse of the provided information.</p>
+                    
+                    <div class="footer-links">
+                        <p>&copy; 2025 TH3F.TECH - All rights reserved | Privacy Policy | Terms of Service</p>
+                    </div>
+                </footer>
+            </div>
+
+            <div id="attack-content" class="content-section">
+                <div class="attack-details"></div>
+            </div>
+        </main>
+    </div>
+
+    <div id="comingSoonModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>🚀 Coming Soon!</h2>
+            <p>This is just the first prototype of TH3F.TECH. We're working hard to bring you comprehensive cybersecurity content.</p>
+            <p>The information you see here is a preview of what's to come. Stay tuned for regular updates and new content!</p>
+            <button id="closeModal" class="modal-btn">Got it!</button>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/content.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  .prose code {
+    @apply bg-gray-100 dark:bg-dark-700 px-2 py-1 rounded text-sm font-mono;
+  }
+  
+  .prose pre {
+    @apply bg-gray-900 dark:bg-dark-800 text-gray-100 p-4 rounded-lg overflow-x-auto;
+  }
+}
+
+@layer components {
+  .nav-item.active {
+    @apply bg-primary-50 dark:bg-primary-900 dark:bg-opacity-20 text-primary-700 dark:text-primary-300;
+  }
+  
+  .attack-link:hover {
+    @apply bg-gray-100 dark:bg-dark-700;
+  }
+  
+  .content-section {
+    @apply hidden;
+  }
+  
+  .content-section.active {
+    @apply block;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .glass {
+    backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.loading-dots::after {
+  content: '';
+  animation: dots 1.5s steps(5, end) infinite;
+}
+
+@keyframes dots {
+  0%, 20% {
+    color: rgba(0,0,0,0);
+    text-shadow:
+      .25em 0 0 rgba(0,0,0,0),
+      .5em 0 0 rgba(0,0,0,0);
+  }
+  40% {
+    color: currentColor;
+    text-shadow:
+      .25em 0 0 rgba(0,0,0,0),
+      .5em 0 0 rgba(0,0,0,0);
+  }
+  60% {
+    text-shadow:
+      .25em 0 0 currentColor,
+      .5em 0 0 rgba(0,0,0,0);
+  }
+  80%, 100% {
+    text-shadow:
+      .25em 0 0 currentColor,
+      .5em 0 0 currentColor;
+  }
+}

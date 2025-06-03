@@ -1,0 +1,39 @@
+{
+  "name": "th3f.tech",
+  "version": "1.0.0",
+  "description": "Professional Cybersecurity Knowledge Base - TH3F.TECH",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && cp -r dist/* ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wmBolles/th3f.tech.git"
+  },
+  "keywords": [
+    "cybersecurity",
+    "hacking",
+    "security",
+    "documentation",
+    "education"
+  ],
+  "author": "Wassim Bolles",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wmBolles/th3f.tech/issues"
+  },
+  "homepage": "https://github.com/wmBolles/th3f.tech#readme",
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/node": "^22.15.29",
+    "autoprefixer": "^10.4.21",
+    "lucide-react": "^0.511.0",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}
